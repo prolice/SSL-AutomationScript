@@ -1,4 +1,4 @@
-# Auto Script to generate SSL certificates
+# Script to Generate SSL certificates (AUTO)
 
 ## Foundry VTT (linux debian -- tests made on ubuntu)
 
