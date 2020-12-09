@@ -6,7 +6,7 @@ foundry_file="foundryvtt.conf"
 #install nginx && unzip
 sudo apt-get install nginx unzip
 sudo mkdir /var/log/nginx/foundry
-cp AutomationScript/files/nginx/${foundry_file} /etc/nginx/conf.d/foundryvtt.conf
+cp SSL-AutomationScript/files/nginx/${foundry_file} /etc/nginx/conf.d/foundryvtt.conf
 sudo sed -i "s/YOURSUBDOMAINHERE/${subdomain}/g" /etc/nginx/conf.d/foundryvtt.conf
 sudo sed -i "s/YOURDOMAINHERE/${fqdn}/g" /etc/nginx/conf.d/foundryvtt.conf
 
@@ -30,7 +30,7 @@ crontab -l | { cat; echo "@reboot    /usr/bin/certbot renew --quiet"; } | cronta
 crontab -l | { cat; echo "0 12 * * *     /usr/bin/certbot renew --quiet"; } | crontab -
 
 sudo sed -i -e "s|location / {|include conf.d/drop;\n\n\tlocation / {|g" /etc/nginx/conf.d/foundryvtt.conf
-sudo cp AutomationScript/files/nginx/drop /etc/nginx/conf.d/drop
+sudo cp SSL-AutomationScript/files/nginx/drop /etc/nginx/conf.d/drop
 sudo systemctl restart nginx
 
 # configure foundry to use ssl
