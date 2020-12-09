@@ -19,8 +19,8 @@ Open a terminal console
 Copy these 3 commands
 
     cd
-    git clone https://github.com/prolice/SSL-Automation.git
-    ./SSL-Automation/scripts/global/install_prolice.sh
+    git clone https://github.com/prolice/SSL-AutomationScript.git
+    ./SSL-AutomationScript/scripts/global/install_prolice.sh
 
 *What is the purpose of these commands
 
